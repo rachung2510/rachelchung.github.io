@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rachel Chung Interactive Portfolio</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./favicons/images/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="./images/favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="./images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="portfolio style.css"/>
+    </head>
+    <body>
+        <script src="./js/three.min.js"></script>
+        <script src="./js/MTLLoader.js"></script>
+        <script src="./js/OBJLoader.js"></script>
+        <script src="./js/slideAnims.js"></script>
+
+        
+        <!--<img class="astronaut" src="./images/astronaut.png"style="height: 18vh">-->
+        <!--<img class="fire" src="./images/flame.png" style="width: auto; height: 23vh">-->
+
+        <img class="astronaut" src="./images/astronaut.png"style="height:24vh">
+        <div class="outer-wrapper">
+            
+            <div class="wrapper" tabindex="-1">
+                
+                <div class="loader">
+                    <span class="loader-wheel"></span>
+                    <style>
+                        .loader {
+                            position: fixed;
+                            z-index: 99;
+                            width: 1700vw;
+                            height: 100vh;
+                            background-color: rgb(37, 37, 37);
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .loader-wheel {
+                            position: fixed !important;
+                            display: inline-block;
+                            margin-top: 45vh;
+                            margin-left: calc(50vw - 3vh);
+                            /*border: 2vh solid #f3f3f3;
+                            border-top: 2vh solid #3498db;
+                            border-radius: 50%;*/
+                            width: 6vh;
+                            height: 6vh;
+                            border: 0.5vh solid white;
+                            animation: spin 2s infinite ease;
+                        }
+                        .loader-fill {
+                            vertical-align: top;
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            background-color: white;
+                            animation: fill 2s infinite ease-in;
+                        }
+                        
+                        .loader.fadeOut {
+                            transition: 0.3s ease;
+                            /*opacity: 0%;*/
+                            animation: fade 1.5s;
+                        }
+
+                        @keyframes fade {
+                            0% { opacity: 100%; }
+                            60% { opacity: 100%; }
+                            100% { opacity: 0%; }
+                        }
+
+                        @keyframes spin {
+                            0% { transform: rotate(0); }
+                            25% { transform: rotate(180deg); }
+                            50% { transform: rotate(180deg); }
+                            75% { transform: rotate(360deg); }
+                            100% { transform: rotate(360deg); }
+                        }
+                        @keyframes fill {
+                            0% { height: 0%; }
+                            25% { height: 0%; }
+                            50% { height: 100%; }
+                            75% { height: 100%; }
+                            100% { height: 0%; }
+                        }
+                    </style>
+                </div>
+
+                <div class="slide one">
+                    <img class="galaxy" src="./images/bg/bg1.png" style="width:100vw; opacity: 0%">
+                    <img class="planets translate" src="./images/planets/planets1.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <img class="addons" src="./images/addons/addon1.png" style="width: auto">
+                    <div class="blink-line">Scroll down or press the down-arrow key</div>
+                </div>
+
+                <div class="slide two">
+                    <img class="planets translate" src="./images/planets/planets2.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <img class="addons" src="./images/addons/addon2.png" style="width: auto">
+                </div>
+
+                <div class="slide three">
+                    <div class="addons">
+                        <img src="./images/addons/addon3.png" style="width: auto; height: 100vh">
+                        <!--<ul class="list" style="position: absolute;">
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>Inventor</li>
+                            <li>Solidworks</li>
+                        </ul>-->
+                    </div>
+                    <!--<img class="addons" src="./images/addons/addon3.png" style="width: 100vw; height: auto">-->
+                    
+                    <div class="grid programming">
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"><img src="./images/ufo1.png"></div>
+                        <div class="grid-item"></div>
+                    </div>
+                </div>
+
+                <div class="slide four">
+                    <div class="addons">
+                        <img src="./images/addons/addon4.png" style="width: auto; height: 100vh">
+                    </div>
+                    <div class="grid graphic">
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"><img src="./images/ufo2.png"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                    </div>
+                </div>
+
+                <div class="slide five">
+                    <img class="addons" src="./images/addons/addon5.png" style="width: auto">
+                </div>
+
+                <div class="slide six">
+                    <img class="planets translate" src="./images/planets/planets6.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon6.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                </div>
+
+                <div class="slide seven" data-done="false">
+                    <div class="move-down">
+                        <img src="./images/move_down.png" style="width: 147vh; height: 90vh;">
+                        <p class="text intro">
+                            <span class="bloodhound-intro"
+                                data-text="F1 IN SCHOOLS COMPETITION BLOODHOUND CATEGORY">
+                            </span><span class="bloodhound-intro cursor active">_</span>
+                        </p>
+                        <div data-diagram="bloodhound"></div>
+                        <div class="text content">
+                            <ul>
+                                <li>STEM competition where teams design and race their own F1 models</li>
+                                <li>Achieved <i>Gold award</i> and <i>Best Portfolio</i></li>
+                                <li>First foray into CAD design and analysis</li>
+                            </ul>
+                            <!--<span class="bloodhound-content"
+                                data-text="F1 in Schools is a STEM competition where teams design, manufacture and race their own model F1 cars. In the 2014 Bloodhound category, the team achieved the Gold Award and Best Portfolio.">
+                            </span><span class="bloodhound-content cursor active">_</span>-->
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="slide eight">
+                    <img class="planets translate" src="./images/planets/planets8.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon8.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                </div>
+
+                <div class="slide nine" data-done="false">
+                    <div class="move-down">
+                        <img src="./images/move_down.png" style="width: 147vh; height: 90vh;">
+                        <p class="text intro">
+                            <span class="nationals-intro"
+                                data-text="F1 IN SCHOOLS COMPETITION NATIONALS">
+                            </span><span class="nationals-intro cursor active">_</span>
+                        </p>
+                        <div data-diagram="nationals"></div>
+                        <div class="text content">
+                            <ul>
+                                <li>Achieved <i>Fastest Car</i> and <i>Overall Second</i></li>
+                                <li>Awarded <i>Best Engineered Car</i> for innovation on car wheels that improved suspension on the track</li>
+                            </ul>
+                            <!--<span class="nationals-content"
+                                data-text="In the F1 in Schools Nationals, the team achieved the Fastest Car, Overall Second, and was also awarded Best Engineered Car for our innovation on the car wheels that greatly improved its speed.">
+                            </span><span class="nationals-content cursor active">_</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide ten">
+                    <img class="planets translate" src="./images/planets/planets10.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon10.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                </div>
+
+                <div class="slide eleven" data-done="false">
+                    <div class="move-down">
+                        <img src="./images/move_down.png" style="width: 147vh; height: 90vh;">
+                        <p class="text intro">
+                            <span class="dip-intro"
+                                data-text="Internship @ NUS Design Incubation Center">
+                            </span><span class="dip-intro cursor active">_</span>
+                        </p>
+                        <div data-diagram="dip"></div>
+                        <div class="text content">
+                            <ul>
+                                <li>Familiarisation with product design, brainstorming and prototyping methods, e.g. silicon molding, 3D-printing</li>
+                                <li>Conceived a UIUX for a mobile 3D CAD software with cloud capabilities</li>
+                                <li>Constructed a prototype of a utensil holder that aimed to facilitate easy access to utensils</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide twelve">
+                    <img class="planets translate" src="./images/planets/planets12.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon12.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                </div>
+
+                <div class="slide thirteen" data-done="false">
+                    <div class="move-down">
+                        <img src="./images/move_down.png" style="width: 147vh; height: 90vh;">
+                        <p class="text intro">
+                            <span class="ydsp-intro"
+                                data-text="RESEARCH @ YOUTH DEFENCE SCIENCE PROGRAMME">
+                            </span><span class="ydsp-intro cursor active">_</span>
+                        </p>
+                        <div data-diagram="ydsp"></div>
+                        <div class="text content">
+                            <ul>
+                                <li>Organised by Defence Science and Technology Agency (DSTA)</li>
+                                <li>Project focused on the analysis of the motion of a bio-inspired air vehicle (MAV)</li>
+                                <li>By controlling the wing angle and wing-flapping frequency to affect its pitch, yaw and roll, the MAV could move in all three axes</li>
+                            </ul>
+                            <!--<span class="ydsp-content"
+                                data-text="Under the mentorship of NUS T-Labs, the project focused on the analysis of the motion of a bio-inspired micro air vehicle.">
+                            </span><span class="ydsp-content cursor active">_</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide fourteen">
+                    <img class="planets translate" src="./images/planets/planets14.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon14.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                </div>
+
+                <div class="slide fifteen" data-done="false">
+                    <div class="move-down">
+                        <img src="./images/move_down.png" style="width: 147vh; height: 90vh;">
+                        <p class="text intro">
+                            <span class="clock-intro"
+                                data-text="5th Singapore International 3D Printing Competition">
+                            </span><span class="clock-intro cursor active">_</span>
+                        </p>
+                        <div data-diagram="clock"></div>
+                        <div class="text content">
+                            <p>
+                                Inspired by the melting clock in Salvador Dali's &ldquo;The Persistance of Memory&rdquo;, the hand mesh grasping onto the melting clock depicts our futile attempt to control time.
+                            <p>
+                            <!--<span class="clock-content"
+                                data-text="Inspired by the melting clock in Salvador Dali's &ldquo;The Persistance of Memory&rdquo;, the hand mesh grasping onto the melting clock depicts our futile attempt to control time.">
+                            </span><span class="clock-content cursor active">_</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide sixteen">
+                    <img class="planets translate" src="./images/planets/planets16.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon16.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                </div>
+
+                <div class="slide seventeen" data-done="false">
+                    <div class="move-down">
+                        <img src="./images/move_down.png" style="width: 147vh; height: 90vh;">
+                        <p class="text intro">
+                            <span class="yep-intro"
+                                data-text="ST Engineering Young Engineers' Programme">
+                            </span><span class="yep-intro cursor active">_</span>
+                        </p>
+                        <div data-diagram="yep"></div>
+                        <div class="text content">
+                            <ul>
+                                <li>Awarded the YEP scholarship by ST Engineering</li>
+                            <li>Participated in an attachment which comprised visits to ST Electronics, ST Marine, ST Aerospace and ST Kinetics</li>
+                            <li>Familiarisation with the various facilities and modus operandi of different departments, culminating in a presentation to the directors</li>
+                            </ul>
+                            <!--<span class="piano-content"
+                                data-text="Designed as a gift for a friend, the 3d-printed piano houses a customised music box. Through a modified 3D-printed rotating cylinder, as well as painstaking effort to tune each note of the comb, the music box is customised to play their favourite tune.">
+                            </span><span class="piano-content cursor active">_</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide eighteen">
+                    <img class="planets translate" src="./images/planets/planets18.png" style="width: auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon18.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                </div>
+
+                <div class="slide nineteen" data-done="false">
+                    <div class="move-down">
+                        <img src="./images/move_down.png" style="width: 147vh; height: 90vh;">
+                        <p class="text intro" style="height: 8vh">
+                            <span class="piano-intro"
+                                data-text="3D-printed piano with music box">
+                            </span><span class="piano-intro cursor active">_</span>
+                        </p>
+                        <div data-diagram="piano"></div>
+                        <div class="text content">
+                            <ul>
+                                <li>Designed as a gift for a friend, the 3d-printed piano houses a customised music box</li>
+                                <li>3d-printed rotating cylinder was modified based on a self-arrangement of a certain tune</li>
+                                <li>Music comb was tuned to the specific notes by soldering on or filing off metal to change the pitch</li>
+                            </ul>
+                            <p class="small-text">Much thanks to <a style="color:#81ecec" href="https://belalmksaid.github.io">Belal Said</a> for his to-scale CAD model of the music box</p>
+                            <!--<span class="piano-content"
+                                data-text="Designed as a gift for a friend, the 3d-printed piano houses a customised music box. Through a modified 3D-printed rotating cylinder, as well as painstaking effort to tune each note of the comb, the music box is customised to play their favourite tune.">
+                            </span><span class="piano-content cursor active">_</span>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="slide eighteen">
+                    <img class="planets translate" src="./images/planets/planets16.png" data-speed=0.3>
+                    <div class="before-end"></div>
+                </div>-->
+                
+                <div class="slide twenty">
+                    <img class="planets translate" src="./images/planets/planets20.png" style="width:auto; height: 100vh" data-speed=0.3>
+                    <div class="addons">
+                        <img src="./images/addons/addon20.png" style="width: auto; height: 100vh; right: 0%; bottom: 0%">
+                    </div>
+                    <div class="fireworks left">
+                        <div class="radial-item itemA"></div>
+                        <div class="radial-item itemB"></div>
+                        <div class="radial-item itemC"></div>
+                        <div class="radial-item itemD"></div>
+                        <div class="radial-item itemE"></div>
+                        <div class="radial-item itemF"></div>
+                    </div>
+                    <div class="fireworks right">
+                        <div class="radial-item itemG"></div>
+                        <div class="radial-item itemH"></div>
+                        <div class="radial-item itemJ"></div>
+                        <div class="radial-item itemK"></div>
+                        <div class="radial-item itemL"></div>
+                        <div class="radial-item itemM"></div>
+                    </div>
+                    <a href="index.html" class="return">Return to home</a>
+                </div>
+
+                <script src="./js/v3.js"></script>
+                <script>
+                    // Astronaut
+                    const astronaut = document.querySelector('.astronaut');
+
+                    // Intersection Observer
+                    document.addEventListener("DOMContentLoaded", () => {
+                        let options = {
+                            root: null,
+                            rootMargin: "0px 0px",
+                            threshold: 0.50
+                        };
+                        let observer = new IntersectionObserver(beTouching, options);
+                        document.querySelectorAll('.wrapper .slide').forEach(div => {
+                            observer.observe(div);
+                        }); 
+                    });
+
+                    var currSlide = null;
+                    var hasIntersection;
+                    function beTouching(entries) {
+                        var move_down;
+                        hasIntersection = false;
+                        entries.forEach(entry => {
+                            /*
+                            if (entry.isIntersecting) {
+                                //console.log('intersecting');
+                                //console.log(entry.target)
+                                slideAnim(entry.target);
+
+                                // move down
+                                if (entry.target.firstChild && entry.target.children[0].className == "move-down") {
+                                    move_down = entry.target.children[0];
+                                    //console.log(move_down);
+                                    move_down.classList.add('active');
+                                    currSlide = entry.target;
+                                
+                                    let xy = move_down.getBoundingClientRect();
+                                    let astronaut_xy = astronaut.getBoundingClientRect();
+                                    //console.log(xy);
+                                    //console.log(astronaut_xy);
+                                    var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) / 100;
+                                    console.log(vh);
+                                    if (astronaut_xy.left > xy.left && astronaut_xy.right < (xy.left + 147*vh)) 
+                                        hasIntersection = true;
+                                }
+                                //observer.unobserve(entry.target);
+                            } else {
+                                if (entry.target.firstChild && entry.target.children[0].className == "move-down active")  {
+                                    if (currSlide != null && currSlide.className == entry.target.className)
+                                        currSlide = null;
+                                    //console.log(entry.target);
+                                    entry.target.children[0].classList.remove('active');
+                                }
+                            }*/
+                        })
+                        //console.log(hasIntersection);
+                    }
+
+                    function isIntersecting(entry, bool) {
+                        if (bool) {
+                            slideAnim(entry);
+
+                            // move down
+                            if (entry.firstChild && entry.children[0].classList.contains("move-down")) {
+                                move_down = entry.children[0];
+                                //console.log(move_down);
+                                if (entry.children[0].className == "move-down")
+                                    move_down.classList.add('active');
+                                let xy = move_down.getBoundingClientRect();
+                                let astronaut_xy = astronaut.getBoundingClientRect();
+                                //console.log(xy);
+                                //console.log(astronaut_xy.right);
+                                if (astronaut_xy.right > xy.left && astronaut_xy.right < (xy.left + 1.47*window.innerHeight)) {
+                                    hasIntersection = true;
+                                    //console.log('intersect');
+                                } else {
+                                    hasIntersection = false;
+                                    //console.log('not intersect');
+                                }
+                            //observer.unobserve(entry.target);
+                            }
+                        } else {
+                            if (entry.firstChild && entry.children[0].className == "move-down active")  {
+                                //console.log(entry.target);
+                                entry.children[0].classList.remove('active');
+                            }
+                        }
+                    }
+
+                    // parallax scrolling variables
+                    const translate = document.querySelectorAll('.translate');
+                    var img = document.getElementsByClassName('galaxy')[0];
+                    //console.log(xy.x);
+
+                    var isScrolling;
+                    var lastScroll = -1; var xy = 0;
+                    let wrapper = document.getElementsByClassName('outer-wrapper');
+
+                    var stop_blink = false;
+                    wrapper[0].addEventListener('scroll', () => {
+                        var entries = document.querySelectorAll('.wrapper .slide');
+                        entries.forEach(entry => {
+                            xy = entry.getBoundingClientRect();
+                            /*console.log(entry.className);
+                            console.log(xy.left);
+                            console.log(xy.right);
+                            console.log(window.innerWidth);*/
+                            if (xy.left > -window.innerHeight*0.98 && xy.left < window.innerWidth
+                                && xy.right < window.innerWidth+(window.innerHeight*1.47)) {
+                                //console.log(entry.className);
+                                //console.log(xy.left);
+                                currSlide = entry;
+                                isIntersecting(entry, true);
+                            } else
+                                isIntersecting(entry, false);
+                        });
+
+
+                        // stop blink line
+                        if (!stop_blink) {
+                            var blink_line = document.getElementsByClassName('blink-line')[0];
+                            blink_line.style.color = 'transparent';
+                        }
+
+                        // intersection between astronaut and drop-down
+                        /*if (currSlide != null) {
+                            //console.log(currSlide);
+                            move_down_xy = currSlide.children[0].getBoundingClientRect();
+                            astronaut_xy = astronaut.getBoundingClientRect();
+                            if (astronaut_xy.right > move_down_xy.left && astronaut_xy.right < move_down_xy.right) {
+                                //console.log('intersect');
+                                hasIntersection = true;
+                            }
+                        }*/
+
+                        // astronaut opacity
+                        if (hasIntersection) {
+                            //console.log('intersection');
+                            astronaut.classList.add('opacity');
+                        } else {
+                            if (astronaut.classList.contains('opacity'))
+                                astronaut.classList.remove('opacity');
+                        }
+
+                        // parallax scrolling
+                        //console.log(xy.x);
+                        translate.forEach(elem => {
+                            let speed = elem.dataset.speed;
+                            var slide_xy = elem.parentNode.getBoundingClientRect();
+                            elem.style.transform = `translateX(${slide_xy.x * speed}px)`;
+                        }) 
+
+                        // detect direction
+                        var currScroll = xy.x;
+                        var scrollDown;
+                        if (currScroll > lastScroll) scrollDown = false;
+                        else scrollDown = true;
+                        lastScroll = currScroll;
+
+                        // movement
+                        if (scrollDown) {
+                            //console.log(astronaut.className);
+                            astronaut.classList.add('active');
+                            //if (!hasIntersection) fire.classList.add('active');
+                            window.clearTimeout( isScrolling );
+                            // Set a timeout to run after scrolling ends
+                            isScrolling = setTimeout(function() {
+                                //console.log(fire.className);
+                                setTimeout(() => {
+                                    astronaut.classList.add('transition');
+                                    astronaut.classList.remove('active');
+                                    //fire.classList.remove('active');
+                                }, 100);
+                                //console.log(astronaut.className);
+                                setTimeout(() => { 
+                                    astronaut.classList.remove('transition'); 
+                                    //console.log(astronaut.className);
+                                }, 500);
+                                //console.log( 'Scrolling has stopped.' );
+                            }, 66);
+                        }
+
+                        
+                    });
+                    
+                    window.addEventListener('resize', () => {
+                        var outer_wrapper = document.querySelector('.outer-wrapper');
+                        outer_wrapper.style.width = window.innerHeight + "px";
+                        outer_wrapper.style.transform = "rotate(-90deg) translateX(-" + window.innerHeight + "px)";
+                    })
+                    
+                    window.onload = () => {
+                        setTimeout(() => {
+                            var loader = document.querySelector('.loader');
+                            var wrapper = document.querySelector('.wrapper');
+                            //console.log(wrapper);
+
+                            var outer_wrapper = document.querySelector('.outer-wrapper');
+                            outer_wrapper.style.width = window.innerHeight + "px";
+                            outer_wrapper.style.transform = "rotate(-90deg) translateX(-" + window.innerHeight + "px)";
+
+                            setTimeout(() => { wrapper.style.width = "3940vh";}, 500);
+                            wrapper.focus();
+                            loader.classList.add("fadeOut");
+                            loader.children[0].style="transition: .3s; opacity: 0%;";
+                            setTimeout(()=>{
+                                loader.parentNode.removeChild(loader);
+                                astronaut.style.opacity="100%";
+                            },1200);
+                        },3000);
+                    };
+                </script>
+            </div>
+        </div>
+        <script>
+
+        </script>
+    </body>
+</html>

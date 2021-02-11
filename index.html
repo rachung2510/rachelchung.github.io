@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />-->
+        <title>Rachel Chung</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./favicons/images/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="./images/favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="./images/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="index style.css"/>
+    </head>
+    <body>
+        <div class="loader">
+            <span class="loader-wheel"></span>
+            <style>
+                .loader {
+                    position: fixed;
+                    z-index: 99;
+                    width: 1700vw;
+                    height: 100vh;
+                    background-color: #3c6382;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .loader-wheel {
+                    position: fixed !important;
+                    display: inline-block;
+                    margin-top: 45vh;
+                    margin-left: calc(50vw - 3vh);
+                    /*border: 2vh solid #f3f3f3;
+                    border-top: 2vh solid #3498db;
+                    border-radius: 50%;*/
+                    width: 6vh;
+                    height: 6vh;
+                    border: 0.5vh solid rgb(245,245,245);
+                    animation: spin 2s infinite ease;
+                }
+  
+                .loader.fadeOut {
+                    transition: 0.3s ease;
+                    /*opacity: 0%;*/
+                    animation: fade 1.5s;
+                }
+
+                @keyframes fade {
+                    0% { opacity: 100%; }
+                    60% { opacity: 100%; }
+                    100% { opacity: 0%; }
+                }
+
+                @keyframes spin {
+                    0% { transform: rotate(0); }
+                    25% { transform: rotate(180deg); }
+                    50% { transform: rotate(180deg); }
+                    75% { transform: rotate(360deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            </style>
+        </div>
+        <div class="container">
+            <div class="header">
+                <span class="menu">
+                    <span class="menu-btn"></span>
+                    <ul>
+                        <li class="menu-item"><a href="#home">Home</a></li>
+                        <li class="menu-item"><a href="#about">About</a></li>
+                        <li class="menu-item"><a href="#projects">Projects</a></li>
+                        <li class="menu-item"><a href="#contact">Contact</a></li>
+                    </ul>
+                </span>
+                <div class="header-text">Rachel Chung</div>
+            </div>
+
+            <div class="main">
+                <div id="home" class="content portfolio" style="padding:0">
+                    <div style="background: url(./images/bg_only.png); background-repeat:repeat; background-size:100vw auto; height:max(600px,100vh); width:100vw"></div>
+                    <div style="position: absolute; top:0; background-image:url(./images/stars_only.png); background-repeat:repeat; background-size: max(900px,100vw) auto; width:100vw;height:max(600px,100vh)"></div>
+                    <a href="mportfolio.html" id="btn">View Interactive Portfolio</a>
+                </div>
+                <div id="about" class="content about" style="background: rgb(245,245,245)">
+                    <p class="title" style="color:rgb(104,104,104)">About</p>
+                    <div class="text"> 
+                        <p class="bold" style="color:#71afbd">Hi, I'm Rachel Chung.</p>
+                        <br>
+                        <p>I'm a Year 2 electrical engineering student studying at the National University of Singapore.</p>
+                        <br>
+                        <p class="bold" style="color:#71afbd">I love to solve problems.</p>
+                        <br>
+                        <p>I thoroughly enjoy the process of facing a problem and coming up with innovative solutions to solve it, and I thrive on learning new skills if it means being one step closer to a solution.</p>
+                        <br>
+                        <p>Do check out my <a href="portfolio.html" style="color:#71afbd">interactive portfolio</a>, and feel free to contact me <a href="#contact" style="color:#71afbd">below</a>.</p>
+                    </div>
+                </div>
+                <div id="projects" class="content projects" style="background:#3c6382">
+                    <p class="title" style="color: rgb(245, 245, 245); ">Projects</p>
+                    <div class="scroll-container">
+                        <i id="pre" class='nav-btn'></i>
+                        <i id="nxt" class='nav-btn'></i>
+                        <p class="front-guide">LEFT click and drag: rotate, SCROLL: zoom, RIGHT click and drag: pan</p>
+                        <p class="front-guide" style="bottom:0; margin-bottom:max(5px,1vh)">Click the center to view more information on the model</p>
+                        <p class="back-guide" style="color:rgb(197, 209, 218);; bottom:0; margin-bottom:max(5px,1vh)">Click anywhere to return to model</p>
+                        <div class="scroll-wrapper">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="scene 1"></div>
+                                    <div class="press show">View info</div>
+                                </div>
+                                <div class="back">
+                                    <p class="head">2014 F1 IN SCHOOLS COMPETITION BLOODHOUND CATEGORY</p>
+                                    <p class="text">F1 in Schools is a STEM competition where teams design, manufacture and race their own model F1 cars. In 2014, my team participated in the Bloodhound category and achieved the <strong>Gold Award</strong>, as well as <strong>Best Portfolio</strong> for our efforts on our design and marketing portfolio.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="front">
+                                    <div class="scene 2"></div>
+                                    <div class="press show">View info</div>
+                                </div>
+                                <div class="back">
+                                    <p class="head">2015 F1 IN SCHOOLS COMPETITION NATIONALS</p>
+                                    <p class="text">F1 in Schools is a STEM competition where teams design, manufacture and race their own model F1 cars. In the 2015 Nationals, as design engineer, my innovation on flexible spokes for the car wheels to improve suspension awarded my team the <strong>Best Engineered Car</strong> and allowed us to clinch the <strong>Fastest Car</strong> during the race, as well as <strong>Overall Second</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="front">
+                                    <div class="scene 3"></div>
+                                    <div class="press show">View info</div>
+                                </div>
+                                <div class="back">
+                                    <p class="head">2016 RESEARCH @ YOUTH DEFENCE SCIENCE PROGRAMME</p>
+                                    <p class="text">Organised by the Defence Science and Technology Agency (DSTA), my project for Research@YDSP focused on the analysis of the motion of a bio-inspired micro air vehicle. Under the mentoship of NUS T-Labs, I examined how the MAV could mimic the flight pattern of a hummingbird and achieve movement in three axes by varying the frequency of wing flapping and angle of wing stroke plane. </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="front">
+                                    <div class="scene 4"></div>
+                                    <div class="press show">View info</div>
+                                </div>
+                                <div class="back">
+                                    <p class="head">2017 5th Singapore International 3D Printing Competition</p>
+                                    <p class="text">The 2017 3D Printing Competition challenged constestants to design and 3D print clocks with innovatively unique and enthralling designs. Inspired by the melting clock in Salvador Dali's &ldquo;The Persistance of Memory&rdquo;, I designed a hand mesh grasping onto the melting clock to depict human's futile attempt to control time.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="front">
+                                    <div class="scene 5"></div>
+                                    <div class="press show">View info</div>
+                                </div>
+                                <div class="back">
+                                    <p class="head">3D-printed piano with music box</p>
+                                    <p class="text">Designed as a gift for a friend, the 3d-printed piano houses a music box customised to play their favourite tune. The 3D-printed rotating cylinder was modified to play a self-arranged tune, and the metal comb was painstakingly tuned to the required scale by soldering on and filing off material to decrease or increase the pitch of each tooth.</p>
+                                    <p class="small-text">Much thanks to <a href="https://belalmksaid.github.io/"><strong>Belal Said</strong></a> for his to-scale CAD model of the music box</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        const scroll = document.querySelector('.scroll-wrapper');
+                        const cards = document.querySelectorAll('.card');
+                        const canvases = document.querySelectorAll('.scene');
+                        const pre = document.querySelector('#pre');
+                        const nxt = document.querySelector('#nxt');
+                        const front_guide = document.querySelectorAll('.front-guide');
+                        const back_guide = document.querySelector('.back-guide');
+
+                        let ctr = 0;
+                        var size = cards[0].clientWidth;
+                        var flipped = false;
+                        
+                        //console.log(scroll.style);
+
+                        // resize card
+                        function resizeCard() {
+                            canvases.forEach(canvas => {
+                                if (scroll.clientWidth >= 1.97*scroll.clientHeight) {
+                                    canvas.style.width = (1.97*scroll.clientHeight) + 'px';
+                                    canvas.style.height = scroll.clientHeight + 'px';
+                                } else {
+                                    canvas.style.width = scroll.clientWidth + 'px';
+                                    canvas.style.height = (0.51*scroll.clientWidth) + 'px';
+                                }
+                                canvas.style.left = `calc(50% - ${canvas.clientWidth/2}px)`;
+                                canvas.style.top = `calc(50% - ${canvas.clientHeight/2}px)`;
+                            });
+                        }
+                        resizeCard();
+                        window.addEventListener('resize', () => { resizeCard(); });
+
+                        // image slider init
+                        scroll.style.transform = 'translateX(' + (-size * ctr) + 'px)';
+                        pre.classList.add('hide');
+                        back_guide.style.opacity = '0';
+
+                        nxt.addEventListener('click', () => {
+                            size = cards[0].clientWidth; // refresh size
+
+                            // update btns
+                            if (pre.classList.contains('hide')) 
+                                pre.classList.remove('hide');
+                            if (ctr >= cards.length - 1) return;
+                            else if (ctr == cards.length - 2) {
+                                if (!nxt.classList.contains('hide')) 
+                                    nxt.classList.add('hide');
+                            }
+
+                            // scroll card
+                            scroll.style.transition = "transform 0.4s ease";
+                            ctr++;
+                            scroll.style.transform = 'translateX(' + (-size * ctr) + 'px)';
+
+                            // reset card
+                            if (flipped) {
+                                setTimeout(() => {
+                                    cards[ctr-1].style.transform = "rotateY(0)";
+                                    flipped = false;
+                                    btns[ctr-1].style.pointerEvents = 'auto';
+                                    if (!btns[ctr-1].classList.contains('show')) btns[ctr-1].classList.add('show');
+                                    front_guide.forEach(e => { e.style.opacity = '1'; });
+                                    back_guide.style.opacity = '0';
+                                    cards[ctr-1].style.cursor = "auto";
+                                    canvases[ctr-1].style.zIndex = '0';
+                                }, 400);
+                            }
+                        });
+                        pre.addEventListener('click', () => {
+                            size = cards[0].clientWidth; // refresh size
+
+                            // update btns
+                            if (nxt.classList.contains('hide')) 
+                                nxt.classList.remove('hide');
+                            if (ctr <= 0) return;
+                            else if (ctr == 1) {
+                                if (!pre.classList.contains('hide')) 
+                                    pre.classList.add('hide');
+                            }
+
+                            // scroll card
+                            scroll.style.transition = "transform 0.4s ease";
+                            ctr--;
+                            scroll.style.transform = 'translateX(' + (-size * ctr) + 'px)';
+
+                            // reset card
+                            if (flipped) {
+                                setTimeout(() => {
+                                    cards[ctr+1].style.transform = "rotateY(0)";
+                                    flipped = false;
+                                    btns[ctr+1].style.pointerEvents = 'auto';
+                                    if (!btns[ctr+1].classList.contains('show')) btns[ctr+1].classList.add('show');
+                                    front_guide.forEach(e => { e.style.opacity = '1'; });
+                                    back_guide.style.opacity = '0';
+                                    cards[ctr+1].style.cursor = "auto";
+                                    canvases[ctr+1].style.zIndex = '0';
+                                }, 400);
+                            }
+                        });
+                        
+                        /*// last and first
+                        scroll.addEventListener('transitionend', () => {
+                            if (cards[ctr].id === 'lastClone') {
+                                scroll.style.transition = "none";
+                                ctr = cards.length - 2;
+                                scroll.style.transform = 'translateX(' + (-size * ctr) + 'px)';
+                            }
+                            if (cards[ctr].id === 'firstClone') {
+                                scroll.style.transition = "none";
+                                ctr = cards.length - ctr;
+                                scroll.style.transform = 'translateX(' + (-size * ctr) + 'px)';
+                            }
+                        })*/
+
+                        // flip card
+                        const btns = document.querySelectorAll('.press.show');
+                        btns.forEach(btn => {
+                            btn.addEventListener('click', () => {
+                                cards[ctr].style.transform = "rotateY(180deg)";
+                                cards[ctr].style.cursor = "pointer";
+                                setTimeout(() => { flipped = true; }, 300);
+                                btn.style.pointerEvents = 'none';
+                                btn.classList.remove('show');
+                                front_guide.forEach(e => { e.style.opacity = '0'; });
+                                back_guide.style.opacity = '1';
+                                canvases[ctr].style.zIndex = '-1';
+                                //canvases[ctr].pointerEvents="none";
+                                //console.log(canvases[ctr]);
+                            });
+                        })
+                        
+                        /*cards.forEach(card => {
+                            card.addEventListener('mouseover', () => {
+                                if (flipped) {
+                                    card.style.cursor = "pointer";
+                                    /*card.addEventListener('click', () => {
+                                        card.style.transform = "rotateY(0)";
+                                        flipped = false;
+                                        btns[ctr].style.pointerEvents = 'auto';
+                                        front_guide.forEach(e => { e.style.opacity = '1'; });
+                                        back_guide.style.opacity = '0';
+                                        card.style.cursor = "auto";
+                                    }, 'once');
+                                } else
+                                    card.style.cursor = "auto";
+                            });
+                        })*/
+                        
+                        cards.forEach(card => {
+                            card.addEventListener('click', () => {
+                                if (flipped) {
+                                    card.style.transform = "rotateY(0)";
+                                    flipped = false;
+                                    btns[ctr].style.pointerEvents = 'auto';
+                                    btns[ctr].classList.add('show');
+                                    front_guide.forEach(e => { e.style.opacity = '1'; });
+                                    back_guide.style.opacity = '0';
+                                    card.style.cursor = "auto";
+                                    canvases[ctr].style.zIndex = '0';
+                                }
+                            });
+                        });
+                        
+                        // resize image slider
+                        window.addEventListener('resize', () => {
+                            size = cards[0].clientWidth;
+                            scroll.style.transform = "translateX(0)";
+                            scroll.style.transform = 'translateX(' + (-size * ctr) + 'px)';
+                        }); 
+                    </script>
+                </div>
+                <div id="contact" class="content contact" style="background:#82ccdd">
+                    <p class="title" style="color:rgb(104,104,104)">Contact</p>
+                    <div class="contact-form">
+                        <form action="action.php" method="post" name="form">
+                            <div class="form name">
+                                <label>Name: </label>
+                                <input type="text" name="name" value="" placeholder="Enter your name">
+                            </div>
+                            <div class="form contact">
+                                <label>Contact: </label>
+                                <input type="text" name="contact" value="" placeholder="Enter your email or phone no">
+                            </div>
+                            <div class="form message">
+                                <label>Message: </label>
+                                <textarea name="msg" placeholder="Type your message..."></textarea>
+                            </div>
+                            <input type="submit" name="submit" value="SUBMIT" class="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="foot">
+                <a href="mailto: chungrc_rachel@gmail.com" target="_blank">
+                    <img class="icon mail" src="./images/mail2.png" alt="email" style="transform: translateX(min(-40px,-7vh))"/>
+                    <img class="icon-hover mail" src="./images/mail_hover.png" alt="email" style="transform: translateX(min(-40px,-7vh))"/>
+                    <div class="test"></div>
+                </a>
+                <a href="https://www.linkedin.com/in/rachel-chung-ruei-chieh/" target="_blank">
+                    <img class="icon linkedin" src="./images/linkedin2.png" alt="linkedin" style="transform: translateX(max(40px,7vh))"/>
+                    <img class="icon-hover linkedin" src="./images/linkedin_hover.png" alt="linkedin" style="transform: translateX(max(40px,7vh))"/>
+                </a>
+            </div>
+
+            <script>
+                // resize
+                let resizeTimer;
+                window.addEventListener("resize", () => {
+                    document.body.classList.add("resize-animation-stopper");
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        document.body.classList.remove("resize-animation-stopper");
+                    }, 400);
+                });
+
+                // menu
+                const menu = document.querySelector('.menu');
+                const menu_btn = document.querySelector('.menu-btn');
+                const header = document.querySelector('.header-text');
+                menu.addEventListener('click', () => {
+                    if (!menu.classList.contains('hasHover')) {
+                        if (menu.classList.contains("active")) {
+                            //menu.style.width = "min(120px,8vh)";
+                            menu.classList.remove('active');
+                            menu_btn.classList.remove('active');
+                            header.classList.remove('active');
+                        } else if (!menu.classList.contains("active")) {
+                            //menu.style.width = "max(372px,85vh)"
+                            menu.classList.add('active');
+                            menu_btn.classList.add('active');
+                            header.classList.add('active');
+                        } 
+                    }
+                });
+
+                // detect slide
+                var currSlide;
+                const content = document.querySelectorAll('.content');
+                const blink = document.querySelector('.blink-line');
+                var showBlink = true;
+                window.addEventListener('scroll', () => {
+                    content.forEach(entry => {
+                        var xy = entry.getBoundingClientRect();
+                        if (xy.top < Math.max(27.5,0.055*window.innerHeight) && xy.bottom < xy.top+xy.height + 1 && xy.bottom > -1) {
+                            //console.log(entry.className);
+                            currSlide = entry;
+                        }
+                        //console.log(xy);
+                    });
+                    changeHeader();
+                });
+
+                // change header
+                function changeHeader() {
+                    const header = document.querySelector(".header-text");
+                    const slideArr = {"content portfolio":0, "content about":1, "content projects":2, "content contact":3};
+                    const txtArr = ["Rachel Chung", "About", "Projects", "Contact"];
+                    var arrIdx = slideArr[currSlide.className];
+                    header.textContent = txtArr[arrIdx];
+                }
+
+                // check for hover
+                const hoverItems = [menu, pre, nxt];
+                const goPortfolio = document.querySelector('#btn');
+                var init = true;
+                function watchForHover() {
+                    // lastTouchTime is used for ignoring emulated mousemove events
+                    let lastTouchTime = 0;
+
+                    function enableHover() {
+                        if (new Date() - lastTouchTime < 500) return;
+                        hoverItems.forEach(e => { e.classList.add("hasHover"); });
+                        if (!init) goPortfolio.href = "portfolio.html";
+                        init = false;
+                    }
+                    function disableHover() { 
+                        hoverItems.forEach(e => {e.classList.remove("hasHover"); }); 
+                        goPortfolio.href = "mportfolio.html";
+                    }
+                    function updateLastTouchTime() { lastTouchTime = new Date(); }
+
+                    document.addEventListener('touchstart', updateLastTouchTime, true);
+                    document.addEventListener('touchstart', disableHover, true);
+                    document.addEventListener('mousemove', enableHover, true);
+
+                    enableHover();
+                }
+
+                watchForHover();
+
+                // loading
+                window.onload = () => {
+                        setTimeout(() => {
+                            var loader = document.querySelector('.loader');
+                            loader.classList.add("fadeOut");
+                            loader.children[0].style="transition: .3s; opacity: 0%;";
+                            setTimeout(()=>{
+                                document.body.style.overflowY = "scroll";
+                                loader.parentNode.removeChild(loader);
+                            },1500);
+                        },1500);
+                    };
+
+                /*window.onload =  () => {
+                    window.document.body.onload = () => {
+                        console.log('loaded');
+                        var loader = document.querySelector('.loader');
+                        loader.classList.add("fadeOut");
+                                loader.children[0].style="transition: .3s; opacity: 0%;";
+                                setTimeout(()=>{
+                                    document.body.style.overflowY = "scroll";
+                                    loader.parentNode.removeChild(loader);
+                                },800);
+                    };
+                };*/
+
+            </script>
+
+            <script src="./js/three.min.js"></script>
+            <script src="./js/MTLLoader.js"></script>
+            <script src="./js/OBJLoader.js"></script>
+            <script src="./js/TrackballControls.js"></script>
+            <script src="./js/v4.js"></script>
+
+            <!--<div class="footer">
+                <div class="about">
+                    <h2>About</h2>
+                    <br>
+                    <img src="images/mail.png" alt="Rachel Chung" style="width:80px; margin: 0px 15px 0px 0px"/>
+                    <br>
+                    <p>Rachel Chung is a Year 2 electrical engineering studying in the National University of Singapore.</p>
+                </div>
+                <div class="contact">
+                    <h2>Contact</h2>
+                    <br>
+                    <a href="chungrc@gmail.com" target="_blank">
+                        <img src="./images/mail.png" alt="email" style="width:50px"/>
+                    </a>
+                    <a href="https://www.google.com.sg">
+                        <img src="./images/linkedin.png" alt="linkedin" style="width:50px"/>
+                    </a>
+                </div>
+            </div>-->
+        </div>
+    </body>
+</html>

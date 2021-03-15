@@ -76,6 +76,10 @@
                             animation: fade 1.5s;
                         }
 
+                        .blink-line {
+                            color: transparent;
+                        }
+
                         @keyframes fade {
                             0% { opacity: 100%; }
                             60% { opacity: 100%; }
@@ -506,6 +510,7 @@
                     let wrapper = document.getElementsByClassName('outer-wrapper');
 
                     var stop_blink = false;
+                    var blink_line = document.getElementsByClassName('blink-line')[0];
                     wrapper[0].addEventListener('scroll', () => {
                         var entries = document.querySelectorAll('.wrapper .slide');
                         entries.forEach(entry => {
@@ -527,7 +532,6 @@
 
                         // stop blink line
                         if (!stop_blink) {
-                            var blink_line = document.getElementsByClassName('blink-line')[0];
                             blink_line.style.color = 'transparent';
                         }
 
@@ -615,6 +619,7 @@
                             setTimeout(()=>{
                                 loader.parentNode.removeChild(loader);
                                 astronaut.style.opacity="100%";
+                                blink_line.style.color = white;
                             },1200);
                         },3000);
                     };

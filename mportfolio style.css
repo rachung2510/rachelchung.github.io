@@ -20,6 +20,10 @@ body {
     overflow-y: hidden;
 }
 
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
 .one { background: url(./images/bg/bg1.png); }
 .two { background: url(./images/bg/bg2.png); }
 .three { background: url(./images/bg/bg3.png); }
